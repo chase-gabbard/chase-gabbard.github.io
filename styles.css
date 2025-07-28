@@ -40,3 +40,26 @@ footer {
   background-color: #eee;
   font-size: 0.9rem;
 }
+
+.header-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.headshot-container {
+  flex-shrink: 0;
+}
+
+.headshot {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bio-content {
+  flex: 1;
+}
