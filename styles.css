@@ -48,9 +48,9 @@ footer {
 }
 
 .headshot {
-  width: 200px;                /* Slightly larger image */
+  width: 300px;                /* Slightly larger image */
   height: auto;
-  border-radius: 8px;
+  border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* optional styling */
 }
 
