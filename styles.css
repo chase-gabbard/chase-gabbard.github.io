@@ -98,3 +98,22 @@ footer {
   margin: 0;
 }
 
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.about-video {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
