@@ -66,6 +66,7 @@ footer {
 
 .publication {
   display: flex;
+  flex-direction: row; /* Force horizontal layout */
   align-items: flex-start;
   gap: 15px;
   margin-bottom: 30px;
@@ -75,11 +76,11 @@ footer {
 
 .pub-num {
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.3em;
   width: 40px;
-  text-align: right;
+  flex-shrink: 0;
+  color: #333;
   margin-top: 5px;
-  color: #555;
 }
 
 .pub-img {
@@ -97,7 +98,3 @@ footer {
   margin: 0;
 }
 
-.pub-text a {
-  margin-left: 8px;
-  font-size: 0.95em;
-}
