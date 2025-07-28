@@ -11,10 +11,7 @@ header {
   text-align: center;
   padding: 2rem;
 }
-.headshot {
-  width: 180px;
-  border-radius: 50%;
-}
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -43,23 +40,24 @@ footer {
 
 .header-flex {
   display: flex;
-  align-items: flex-start;
+  align-items: center;         /* Center vertically */
   gap: 2rem;
   max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-.headshot-container {
-  flex-shrink: 0;
-}
-
 .headshot {
-  width: 150px;
+  width: 200px;                /* Slightly larger image */
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* optional styling */
 }
 
+.bio-content {
+  flex: 1;
+  text-align: left;
+}
 .bio-content {
   flex: 1;
 }
