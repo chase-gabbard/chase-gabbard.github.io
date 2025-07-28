@@ -62,3 +62,42 @@ footer {
 .bio-content {
   flex: 1;
 }
+
+
+.publication {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+.pub-num {
+  font-weight: bold;
+  font-size: 1.4em;
+  width: 40px;
+  text-align: right;
+  margin-top: 5px;
+  color: #555;
+}
+
+.pub-img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.pub-text {
+  flex: 1;
+}
+
+.pub-text p {
+  margin: 0;
+}
+
+.pub-text a {
+  margin-left: 8px;
+  font-size: 0.95em;
+}
