@@ -117,3 +117,9 @@ footer {
   flex: 1 1 45%;
   min-width: 280px;
 }
+
+main.about-flex {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
