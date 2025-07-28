@@ -12,6 +12,14 @@ header {
   padding: 2rem;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
 nav ul {
   display: flex;
   justify-content: center;
