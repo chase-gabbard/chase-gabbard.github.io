@@ -40,7 +40,7 @@ footer {
 
 .header-flex {
   display: flex;
-  align-items: center;         /* Center vertically */
+  align-items: stretch;      /* Make children the same height */
   gap: 2rem;
   max-width: 1000px;
   margin: 2rem auto;
@@ -48,10 +48,11 @@ footer {
 }
 
 .headshot {
-  width: 300px;                /* Slightly larger image */
-  height: auto;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* optional styling */
+  height: 100%;              /* Fill parent height */
+  width: auto;
+  max-width: 250px;          /* Prevent it from getting too wide */
+  border-radius: 8px;
+  object-fit: cover;         /* Ensures it scales without distortion */
 }
 
 .bio-content {
