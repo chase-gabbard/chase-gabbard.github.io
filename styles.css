@@ -12,7 +12,8 @@ header {
   padding: 2rem;
 }
 .headshot {
-  width: 180px;
+  width: 18px;
+  height: auto;
   border-radius: 50%;
 }
 nav ul {
