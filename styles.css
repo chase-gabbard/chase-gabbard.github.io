@@ -109,12 +109,12 @@ footer {
 }
 
 .about-text {
-  flex: 1 1 45%;
+  flex: 1 1 80%;
   min-width: 280px;
 }
 
 .about-video {
-  flex: 1 1 25%;
+  flex: 1 1 15%;
   min-width: 280px;
   border-radius: 2px;
 }
