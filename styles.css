@@ -115,7 +115,7 @@ footer {
 
 .about-video {
   flex: 1 1 15%;
-  min-width: 280px;
+  min-width: 180px;
   border-radius: 2px;
 }
 
