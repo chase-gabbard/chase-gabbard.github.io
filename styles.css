@@ -51,7 +51,7 @@ footer {
   height: 200px;         /* Set fixed height */
   width: auto;
   max-width: 250px;      /* Optional: to ensure it doesn't get too wide */
-  border-radius: 0px;
+  border-radius: 2px;
   object-fit: cover;
 }
 
