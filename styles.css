@@ -148,3 +148,37 @@ footer {
 .project-text p {
   margin-bottom: 0;
 }
+
+
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  text-align: center;
+}
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.caption {
+  font-style: italic;
+  margin-top: 8px;
+}
+
