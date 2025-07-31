@@ -152,18 +152,13 @@ footer {
 
 
 .image-gallery {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  align-items: center;
-  justify-content: center;
-}
-
-.image-row {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
+  justify-items: center;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .image-item {
@@ -174,7 +169,6 @@ footer {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
 }
 
 .caption {
