@@ -179,3 +179,35 @@ footer {
   margin-top: 8px;
 }
 
+
+
+
+.poster-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.poster-item {
+  text-align: center;
+}
+
+.poster-item img {
+  max-width: 100%;
+  max-height: 700px; /* <-- Add your desired max height here */
+  height: auto;
+  width: auto;
+  display: block;
+  object-fit: contain; /* Ensures images scale correctly within bounds */
+}
+
+.caption {
+  font-style: italic;
+  margin-top: 8px;
+}
+
+
