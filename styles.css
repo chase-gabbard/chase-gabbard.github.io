@@ -167,8 +167,11 @@ footer {
 
 .image-item img {
   max-width: 100%;
+  max-height: 300px; /* <-- Add your desired max height here */
   height: auto;
+  width: auto;
   display: block;
+  object-fit: contain; /* Ensures images scale correctly within bounds */
 }
 
 .caption {
