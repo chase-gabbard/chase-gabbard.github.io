@@ -211,3 +211,25 @@ footer {
 }
 
 
+/* Forces the first image container to take up the full row */
+.hero-item {
+    grid-column: 1 / -1; /* Applies if your gallery uses CSS Grid */
+    flex-basis: 100%;    /* Applies if your gallery uses Flexbox */
+    width: 100%;
+    
+    /* Centers the image and the caption */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 20px; /* Adds a little breathing room before the 2-column layout begins */
+}
+
+/* Restricts the size of the top image so it matches the dimensional constraints of the side-by-side images */
+.hero-item img {
+    /* If your side-by-side images take up roughly 50% of the screen, this will match them. 
+       Adjust this percentage (or use a fixed width like 400px) to match your exact layout perfectly. */
+    max-width: 48%; 
+    height: auto;
+}
+
