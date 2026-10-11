@@ -26,9 +26,9 @@
 
   <link rel="preload" href="assets/fonts/outfit-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="assets/js/site.js?v=5" defer></script>
+  <script src="assets/js/site.js?v=6" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -67,11 +67,54 @@
       <div class="wrap">
         <h2 class="visually-hidden" id="themes-title">Research themes</h2>
         <p class="themes-intro">Within this overarching mission, our current research themes are:</p>
-        <ul class="themes">
-          <li>Interfacial dynamics</li>
-          <li>Multiphase transport phenomena</li>
-          <li>Complex fluids</li>
-        </ul>
+        <!-- Research themes: hovering a theme name (or tapping it) opens its panel.
+             To edit a theme, change its name in both the button and the panel below, and its paragraph. -->
+        <div class="themes-ui" data-themes>
+          <div class="theme-tabs" role="tablist" aria-label="Research themes">
+          <button class="theme-tab" type="button" role="tab" id="tab-interfacial-phenomena" aria-controls="interfacial-phenomena" aria-selected="true">Interfacial Phenomena</button>
+          <button class="theme-tab" type="button" role="tab" id="tab-complex-fluids" aria-controls="complex-fluids" aria-selected="false" tabindex="-1">Complex Fluids</button>
+          <button class="theme-tab" type="button" role="tab" id="tab-granular-matter" aria-controls="granular-matter" aria-selected="false" tabindex="-1">Granular Matter</button>
+          <button class="theme-tab" type="button" role="tab" id="tab-fluid-structure-interactions" aria-controls="fluid-structure-interactions" aria-selected="false" tabindex="-1">Fluid-Structure Interactions</button>
+          </div>
+          <div class="theme-stage">
+          <section class="theme-panel is-active" role="tabpanel" id="interfacial-phenomena" aria-labelledby="tab-interfacial-phenomena">
+            <div class="theme-panel__media">
+              <img src="assets/web/themes/interfacial-phenomena.jpg" alt="A thin, clear liquid sheet curving around a vertical jet against a blue background" width="1002" height="609">
+            </div>
+            <div class="theme-panel__text">
+              <h3 class="theme-panel__title">Interfacial Phenomena</h3>
+              <p>At small scales, surface tension takes over. It pulls jets apart into drops, lets droplets bounce on thin cushions of air, and stretches liquid into delicate sheets and bells. We use precision experiments and high-speed imaging to understand how liquid interfaces form, deform, and break, knowledge that underpins technologies from inkjet printing and coating to spray cooling.</p>
+            </div>
+          </section>
+          <section class="theme-panel" role="tabpanel" id="complex-fluids" aria-labelledby="tab-complex-fluids">
+            <div class="theme-panel__media">
+              <img src="assets/web/themes/complex-fluids.jpg" alt="A row of drops hanging from nozzles, each stretched into a longer thread before pinching off" width="1266" height="707" loading="lazy" decoding="async">
+            </div>
+            <div class="theme-panel__text">
+              <h3 class="theme-panel__title">Complex Fluids</h3>
+              <p>Many of the liquids that matter most, from polymer solutions and paints to biological fluids and slurries, do not flow like water. Their viscosity can change with how fast they flow, and they can stretch and recoil like elastic solids. We study how these properties reshape familiar flows such as drop pinch-off, film coating, and flow down fibers, and build models that predict their behavior.</p>
+            </div>
+          </section>
+          <section class="theme-panel" role="tabpanel" id="granular-matter" aria-labelledby="tab-granular-matter">
+            <div class="theme-panel__media">
+              <img src="assets/web/themes/granular-matter.jpg" alt="Drops coated in tiny beads resting on a bed of granular particles, against a black background" width="1051" height="569" loading="lazy" decoding="async">
+            </div>
+            <div class="theme-panel__text">
+              <h3 class="theme-panel__title">Granular Matter</h3>
+              <p>Collections of grains can pour like a liquid, jam like a solid, or armor a liquid surface as a floating raft. We investigate what happens where granular materials and liquids meet: spheres striking particle-laden surfaces, drops coated in beads, and grain layers that buckle and collapse. These studies inform particle capture, filtration, and new approaches to environmental remediation.</p>
+            </div>
+          </section>
+          <section class="theme-panel" role="tabpanel" id="fluid-structure-interactions" aria-labelledby="tab-fluid-structure-interactions">
+            <div class="theme-panel__media">
+              <img src="assets/web/themes/fluid-structure-interactions.jpg" alt="A liquid jet striking a star-shaped target and spreading into thin sheets" width="1120" height="744" loading="lazy" decoding="async" style="object-position: 50% 0%">
+            </div>
+            <div class="theme-panel__text">
+              <h3 class="theme-panel__title">Fluid-Structure Interactions</h3>
+              <p>When a liquid strikes, wraps around, or flows along a solid, the shape of the structure steers the flow, and the flow can push back on the structure. We study these two-way couplings at the capillary scale, from jets shaped by targets of different geometries to fibers and soft surfaces that guide and respond to liquids, with the goal of designing surfaces and devices that control liquid motion.</p>
+            </div>
+          </section>
+          </div>
+        </div>
       </div>
     </section>
 

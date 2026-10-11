@@ -705,22 +705,101 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   color: var(--graphite);
 }
 
-.themes {
+/* Research themes. Without JavaScript, or on narrow screens, every theme shows as a card.
+   On wide screens with JavaScript, the names become tabs: hovering one opens its panel,
+   which grows out from under the name to fill the section. */
+.theme-tabs { display: none; }
+
+.theme-stage {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 3vw, 40px);
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 40px);
 }
-.themes li {
+.theme-panel {
   padding-top: 1rem;
   border-top: 3px solid var(--gold);
-  font-family: var(--font-display);
-  font-size: clamp(1.35rem, 1rem + 1vw, 1.9rem);
-  font-weight: 600;
-  line-height: 1.15;
+}
+.theme-panel__media {
+  aspect-ratio: 17 / 10;
+  margin-bottom: 1.1rem;
+  overflow: hidden;
+  background: var(--mist);
+}
+.theme-panel__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.theme-panel__title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.4rem, 1.1rem + 0.9vw, 1.9rem);
   letter-spacing: -0.02em;
+}
+.theme-panel__text p {
+  max-width: 62ch;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .theme-stage { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .js .theme-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(16px, 2.4vw, 32px);
+    margin-bottom: clamp(24px, 3vw, 40px);
+  }
+  .theme-tab {
+    padding: 1rem 0 0;
+    border: 0;
+    border-top: 3px solid var(--line);
+    background: none;
+    color: var(--graphite);
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 0.9rem + 0.9vw, 1.8rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    text-align: left;
+    align-self: start;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .theme-tab:hover { color: var(--ink); }
+  .theme-tab[aria-selected="true"] {
+    border-top-color: var(--gold);
+    color: var(--ink);
+  }
+
+  .js .theme-stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .js .theme-panel {
+    grid-area: 1 / 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    gap: clamp(28px, 4vw, 56px);
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: var(--paper);
+    visibility: hidden;
+    transition: clip-path 0.55s cubic-bezier(0.22, 0.7, 0.2, 1);
+  }
+  .js .theme-panel.is-leaving {
+    visibility: visible;
+    z-index: 1;
+    opacity: 0;
+  }
+  .js .theme-panel.is-active {
+    visibility: visible;
+    z-index: 2;
+  }
+  .js .theme-panel__media { margin: 0; }
+  .js .theme-panel__title { font-size: clamp(1.7rem, 1.2rem + 1.2vw, 2.4rem); }
 }
 
 .projects {
@@ -779,7 +858,6 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
 }
 
 @media (max-width: 760px) {
-  .themes { grid-template-columns: minmax(0, 1fr); }
   .project { grid-template-columns: minmax(0, 1fr); }
   .project__media { max-width: 360px; }
   .past > li { grid-template-columns: minmax(0, 1fr); }
