@@ -396,12 +396,12 @@ strong, b { font-weight: 700; }
 .intro__text { padding-block: clamp(56px, 8vw, 120px) clamp(56px, 7vw, 104px); }
 
 .intro__title {
-  max-width: 15ch;
+  max-width: 21ch;
   margin: 0;
-  font-size: clamp(2.6rem, 1.3rem + 4.4vw, 5rem);
+  font-size: clamp(2.2rem, 1.2rem + 3.3vw, 4.1rem);
   font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.04em;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
 }
 
 .intro__body {
@@ -654,6 +654,47 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   max-width: 52ch;
   margin: 0;
   color: var(--graphite);
+}
+
+/* ---------- Home: lab news ---------- */
+
+.news { padding-block: clamp(56px, 7vw, 104px); }
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--line);
+}
+.news-item {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 6px clamp(24px, 4vw, 56px);
+  padding-block: 28px;
+  border-top: 1px solid var(--line);
+}
+.news-item__date {
+  padding-top: 0.3em;
+  color: var(--gold-text);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.news-item__title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.4rem, 1.1rem + 0.9vw, 1.9rem);
+  letter-spacing: -0.02em;
+}
+.news-item__body p {
+  max-width: 66ch;
+  margin: 0 0 0.75rem;
+}
+.news-item__link {
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .news-item { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* ---------- Research ---------- */
