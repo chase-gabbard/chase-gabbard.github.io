@@ -1134,6 +1134,11 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   color: var(--graphite);
   font-size: 1rem;
 }
+.member__bio {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  line-height: 1.55;
+}
 
 .members-empty {
   display: flex;
