@@ -339,13 +339,22 @@ strong, b { font-weight: 700; }
 
 /* ---------- Page headings (inner pages) ---------- */
 
+/* Page titles. The visible space above the title (to the line under the menu) equals the
+   space below the intro text (to the line under this section). Text sits inside taller line
+   boxes, so the padding subtracts that built-in room: the title's tallest letters start 0.122em
+   below the top of its line (Outfit semibold), and the intro's last baseline sits 0.4245em above the
+   bottom of its line (Source Serif 4 at line-height 1.55). */
 .page-head {
-  padding-block: clamp(48px, 8vw, 112px) clamp(32px, 5vw, 64px);
+  --page-title-size: clamp(3rem, 1.6rem + 5.6vw, 6rem);
+  --page-lede-size: clamp(1.15rem, 1rem + 0.45vw, 1.375rem);
+  --page-head-gap: clamp(40px, 4vw, 60px);
+  padding-top: calc(var(--page-head-gap) - 0.122 * var(--page-title-size));
+  padding-bottom: calc(var(--page-head-gap) - 0.4245 * var(--page-lede-size));
   border-bottom: 1px solid var(--line);
 }
 .page-head h1 {
   margin: 0;
-  font-size: clamp(3rem, 1.6rem + 5.6vw, 6rem);
+  font-size: var(--page-title-size);
   font-weight: 600;
   line-height: 0.95;
   letter-spacing: -0.04em;
@@ -354,7 +363,7 @@ strong, b { font-weight: 700; }
   max-width: 62ch;
   margin: clamp(20px, 2.5vw, 32px) 0 0;
   color: var(--graphite);
-  font-size: clamp(1.15rem, 1rem + 0.45vw, 1.375rem);
+  font-size: var(--page-lede-size);
   line-height: 1.55;
 }
 
