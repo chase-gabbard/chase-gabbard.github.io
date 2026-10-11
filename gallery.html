@@ -26,9 +26,9 @@
 
   <link rel="preload" href="assets/fonts/outfit-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="assets/js/site.js?v=10" defer></script>
+  <script src="assets/js/site.js?v=11" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -66,49 +66,56 @@
     <section class="section" aria-labelledby="images">
       <div class="wrap">
         <h2 class="section-title" id="images">Images</h2>
+        <!-- Each masonry__col is one column of images (left, middle, right), top to bottom. -->
         <div class="masonry">
-          <figure class="tile">
-            <a href="assets/web/gallery/wheel-of-frequency.jpg" data-lightbox data-caption="Wheel of frequency" data-full="assets/Images/WheelOfFrequency.png">
-              <img src="assets/web/gallery/wheel-of-frequency.jpg" alt="Wheel of frequency" width="1800" height="1796" loading="lazy" decoding="async">
-            </a>
-            <figcaption>Wheel of frequency</figcaption>
-          </figure>
-          <figure class="tile">
-            <a href="assets/web/gallery/bouncing-drop.jpg" data-lightbox data-caption="A bouncing drop" data-full="assets/Images/Drop%20rebound%20from%20a%20nonwetting%20substrate.jpg">
-              <img src="assets/web/gallery/bouncing-drop.jpg" alt="A bouncing drop" width="2000" height="1037" loading="lazy" decoding="async">
-            </a>
-            <figcaption>A bouncing drop</figcaption>
-          </figure>
-          <figure class="tile">
-            <a href="assets/web/gallery/particle-ejection.jpg" data-lightbox data-caption="Particle ejection" data-full="assets/Images/ParticleEjection.jpg">
-              <img src="assets/web/gallery/particle-ejection.jpg" alt="Particle ejection" width="1059" height="954" loading="lazy" decoding="async">
-            </a>
-            <figcaption>Particle ejection</figcaption>
-          </figure>
-          <figure class="tile">
-            <a href="assets/web/gallery/bead-patterns-v2.jpg" data-lightbox data-caption="Bead-on-fiber patterns" data-full="assets/Images/BeadPatterns.jpg">
-              <img src="assets/web/gallery/bead-patterns-v2.jpg" alt="Bead-on-fiber patterns" width="1696" height="2000" loading="lazy" decoding="async">
-            </a>
-            <figcaption>Bead-on-fiber patterns</figcaption>
-          </figure>
-          <figure class="tile">
-            <a href="assets/web/gallery/drop-bath.jpg" data-lightbox data-caption="Drop–bath rebound" data-full="assets/Images/Drop-Bath%20Impact.JPG">
-              <img src="assets/web/gallery/drop-bath.jpg" alt="Drop–bath rebound" width="2000" height="1269" loading="lazy" decoding="async">
-            </a>
-            <figcaption>Drop–bath rebound</figcaption>
-          </figure>
-          <figure class="tile">
-            <a href="assets/web/gallery/breaking-point.jpg" data-lightbox data-caption="The breaking point" data-full="assets/Images/TheBreakingPoint.jpg">
-              <img src="assets/web/gallery/breaking-point.jpg" alt="The breaking point" width="1088" height="616" loading="lazy" decoding="async">
-            </a>
-            <figcaption>The breaking point</figcaption>
-          </figure>
-          <figure class="tile">
-            <a href="assets/web/gallery/chutes-and-ladders.jpg" data-lightbox data-caption="Chutes and ladders" data-full="assets/Images/ChutesAndLadders.jpg">
-              <img src="assets/web/gallery/chutes-and-ladders.jpg" alt="Chutes and ladders" width="1972" height="2000" loading="lazy" decoding="async">
-            </a>
-            <figcaption>Chutes and ladders</figcaption>
-          </figure>
+          <div class="masonry__col">
+            <figure class="tile">
+              <a href="assets/web/gallery/drop-bath.jpg" data-lightbox data-caption="Drop–bath rebound" data-full="assets/Images/Drop-Bath%20Impact.JPG">
+                <img src="assets/web/gallery/drop-bath.jpg" alt="Drop–bath rebound" width="2000" height="1269" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Drop–bath rebound</figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/web/gallery/breaking-point.jpg" data-lightbox data-caption="The breaking point" data-full="assets/Images/TheBreakingPoint.jpg">
+                <img src="assets/web/gallery/breaking-point.jpg" alt="The breaking point" width="1088" height="616" loading="lazy" decoding="async">
+              </a>
+              <figcaption>The breaking point</figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/web/gallery/chutes-and-ladders.jpg" data-lightbox data-caption="Chutes and ladders" data-full="assets/Images/ChutesAndLadders.jpg">
+                <img src="assets/web/gallery/chutes-and-ladders.jpg" alt="Chutes and ladders" width="1972" height="2000" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Chutes and ladders</figcaption>
+            </figure>
+          </div>
+          <div class="masonry__col">
+            <figure class="tile">
+              <a href="assets/web/gallery/particle-ejection.jpg" data-lightbox data-caption="Particle ejection" data-full="assets/Images/ParticleEjection.jpg">
+                <img src="assets/web/gallery/particle-ejection.jpg" alt="Particle ejection" width="1059" height="954" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Particle ejection</figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/web/gallery/bead-patterns-v2.jpg" data-lightbox data-caption="Bead-on-fiber patterns" data-full="assets/Images/BeadPatterns.jpg">
+                <img src="assets/web/gallery/bead-patterns-v2.jpg" alt="Bead-on-fiber patterns" width="1696" height="2000" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Bead-on-fiber patterns</figcaption>
+            </figure>
+          </div>
+          <div class="masonry__col">
+            <figure class="tile">
+              <a href="assets/web/gallery/wheel-of-frequency.jpg" data-lightbox data-caption="Wheel of frequency" data-full="assets/Images/WheelOfFrequency.png">
+                <img src="assets/web/gallery/wheel-of-frequency.jpg" alt="Wheel of frequency" width="1800" height="1796" loading="lazy" decoding="async">
+              </a>
+              <figcaption>Wheel of frequency</figcaption>
+            </figure>
+            <figure class="tile">
+              <a href="assets/web/gallery/bouncing-drop.jpg" data-lightbox data-caption="A bouncing drop" data-full="assets/Images/Drop%20rebound%20from%20a%20nonwetting%20substrate.jpg">
+                <img src="assets/web/gallery/bouncing-drop.jpg" alt="A bouncing drop" width="2000" height="1037" loading="lazy" decoding="async">
+              </a>
+              <figcaption>A bouncing drop</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>

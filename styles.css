@@ -936,13 +936,15 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
 /* ---------- Gallery ---------- */
 
 .masonry {
-  columns: 3 280px;
-  column-gap: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 28px;
+  align-items: start;
 }
-.tile {
-  margin: 0 0 32px;
-  break-inside: avoid;
+@media (max-width: 700px) {
+  .masonry { grid-template-columns: minmax(0, 1fr); }
 }
+.tile { margin: 0 0 32px; }
 .tile a,
 .poster a {
   display: block;
