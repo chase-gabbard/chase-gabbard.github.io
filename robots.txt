@@ -1,4 +1,4 @@
 
 User-agent: *
 Allow: /
-Sitemap: https://chase-gabbard.github.io/sitemap.xml
+Sitemap: https://gabbardlab.com/sitemap.xml
