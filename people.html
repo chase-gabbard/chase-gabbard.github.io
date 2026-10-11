@@ -26,9 +26,9 @@
 
   <link rel="preload" href="assets/fonts/outfit-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="assets/js/site.js?v=7" defer></script>
+  <script src="assets/js/site.js?v=8" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -139,6 +139,30 @@
             <p class="collaborator__topic">Particle scavenging via fiber-guided drops</p>
           </li>
         </ul>
+        <!-- Collaborator map. Each pin is placed by latitude and longitude, so ask Claude to add new ones. -->
+        <figure class="collab-map" role="img" aria-label="World map with markers at our collaborators’ universities: Clemson, South Carolina (Joshua B. Bostwick and John R. Saylor); Coventry, United Kingdom (Radu Cimpeanu); San Francisco, California (Carlos A. Galeano-Rios); Providence, Rhode Island (Daniel M. Harris).">
+          <div class="collab-map__frame">
+            <img src="assets/web/world-map.svg" alt="" width="1008" height="495" loading="lazy" decoding="async">
+            <ul class="collab-map__pins">
+            <li class="pin pin--below" style="left: 29.14%; top: 24.62%">
+              <svg class="pin__icon" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0C5.37 0 0 5.3 0 11.85 0 20.75 12 32 12 32s12-11.25 12-20.15C24 5.3 18.63 0 12 0z"/><circle cx="12" cy="12" r="4.6"/></svg>
+              <span class="pin__label">Bostwick, Saylor<small>Clemson University</small></span>
+            </li>
+            <li class="pin pin--right" style="left: 49.65%; top: 13.46%">
+              <svg class="pin__icon" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0C5.37 0 0 5.3 0 11.85 0 20.75 12 32 12 32s12-11.25 12-20.15C24 5.3 18.63 0 12 0z"/><circle cx="12" cy="12" r="4.6"/></svg>
+              <span class="pin__label">Cimpeanu<small>University of Warwick</small></span>
+            </li>
+            <li class="pin pin--left" style="left: 19.69%; top: 22.54%">
+              <svg class="pin__icon" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0C5.37 0 0 5.3 0 11.85 0 20.75 12 32 12 32s12-11.25 12-20.15C24 5.3 18.63 0 12 0z"/><circle cx="12" cy="12" r="4.6"/></svg>
+              <span class="pin__label">Galeano-Rios<small>Minerva University</small></span>
+            </li>
+            <li class="pin pin--right" style="left: 32.76%; top: 19.89%">
+              <svg class="pin__icon" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0C5.37 0 0 5.3 0 11.85 0 20.75 12 32 12 32s12-11.25 12-20.15C24 5.3 18.63 0 12 0z"/><circle cx="12" cy="12" r="4.6"/></svg>
+              <span class="pin__label">Harris<small>Brown University</small></span>
+            </li>
+            </ul>
+          </div>
+        </figure>
       </div>
     </section>
   </main>
