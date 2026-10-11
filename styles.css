@@ -1188,7 +1188,7 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   line-height: 1.55;
 }
 
-/* Collaborator map: a full-globe map with a red pin at each collaborator's university */
+/* Collaborator map: a full-globe map with a gold pin at each collaborator's university */
 .collab-map { margin: clamp(40px, 5vw, 64px) 0 0; }
 .collab-map__frame { position: relative; }
 .collab-map__frame > img {
@@ -1214,7 +1214,11 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   overflow: visible;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
-.pin__icon path { fill: #d1242f; }
+.pin__icon path {
+  fill: var(--gold);
+  stroke: var(--gold-text);
+  stroke-width: 1.2;
+}
 .pin__icon circle { fill: #fff; }
 .pin__label {
   position: absolute;
