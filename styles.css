@@ -699,12 +699,6 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
 
 /* ---------- Research ---------- */
 
-.themes-intro {
-  max-width: 62ch;
-  margin: 0 0 1.5rem;
-  color: var(--graphite);
-}
-
 /* Research themes. Without JavaScript, or on narrow screens, every theme shows as a card.
    On wide screens with JavaScript, the names become tabs: hovering one opens its panel,
    which grows out from under the name to fill the section. */
