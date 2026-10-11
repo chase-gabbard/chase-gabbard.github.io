@@ -1,83 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Chase T. Gabbard — Experimental Fluid Mechanics</title>
-  
-  <meta name="description" content="Chase T. Gabbard — experimental fluid mechanics and soft matter. Incoming Assistant Professor at Georgia Institute of Technology.">
-  <meta name="keywords" content="Chase Gabbard, fluid mechanics, interfacial flows, drops, fibers, multiphase, soft matter, Georgia Tech">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GabLab | Chase T. Gabbard’s fluid mechanics lab at Georgia Tech</title>
+  <meta name="description" content="GabLab is an experimental fluid mechanics lab at Georgia Tech led by Chase T. Gabbard, studying interfacial dynamics, multiphase transport, and complex fluids.">
   <meta name="author" content="Chase T. Gabbard">
   <link rel="canonical" href="https://chase-gabbard.github.io/">
 
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GabLab">
   <meta property="og:url" content="https://chase-gabbard.github.io/">
-  <meta property="og:title" content="Chase T. Gabbard">
-  <meta property="og:description" content="Interfacial dynamics, multiphase transport, and complex fluids.">
-  <meta property="og:image" content="https://chase-gabbard.github.io/assets/headshot.jpg">
-
+  <meta property="og:title" content="GabLab: Experimental fluid mechanics at Georgia Tech">
+  <meta property="og:description" content="GabLab is an experimental fluid mechanics lab at Georgia Tech led by Chase T. Gabbard, studying interfacial dynamics, multiphase transport, and complex fluids.">
+  <meta property="og:image" content="https://chase-gabbard.github.io/assets/logo/gablab-social.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Chase T. Gabbard">
-  <meta name="twitter:description" content="Interfacial dynamics, multiphase transport, and complex fluids.">
-  <meta name="twitter:image" content="https://chase-gabbard.github.io/assets/headshot.jpg">
+  <meta name="twitter:title" content="GabLab: Experimental fluid mechanics at Georgia Tech">
+  <meta name="twitter:description" content="GabLab is an experimental fluid mechanics lab at Georgia Tech led by Chase T. Gabbard, studying interfacial dynamics, multiphase transport, and complex fluids.">
+  <meta name="twitter:image" content="https://chase-gabbard.github.io/assets/logo/gablab-social.png">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="assets/fonts/outfit-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/site.js?v=3" defer></script>
 </head>
 <body>
-    <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-    </ul>
-  </nav>
-  
-<header class="header-flex">
-  <div class="headshot-container">
-    <img src="assets/headshot.jpg" alt="Chase T. Gabbard headshot" class="headshot">
-  </div>
-<div class="bio-content">
-  <p class="compact-title">
-    <b><span style="font-size: 1.4em;">Chase T. Gabbard</span></b><br>
-    Incoming Assistant Professor<br>
-    Woodruff School of Mechanical Engineering, Georgia Institute of Technology
-  </p>
-  <p>
-       Hello, and welcome to my homepage. My research centers on fluid mechanics and soft matter, with particular interests in <b>interfacial dynamics</b>, <b>multiphase transport phenomena</b>, and <b>complex fluids</b>.
-  </p>
-</div>
-</header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main class="about-flex">
-  <div class="about-text">
-    <p>
-      <b><span style="font-size: 1.4em;">About me</span></b><br>
-      I earned my B.S. in Mechanical Engineering from Clemson University in 2018 and remained at Clemson for graduate study, completing both my M.S. (2020) and Ph.D. (2024) under the mentorship of <a href="https://cecas.clemson.edu/~jbostwi/">Dr. Joshua Bostwick</a>. My doctoral work explored a range of fluid phenomena and culminated in the dissertation <em>Capillary Phenomena in Flow Down Fibers: Beads, Bridges, Sheets, and Threads</em>. Alongside my research, I served as Chair of the Mechanical Engineering Graduate Student Council, co-hosted the Graduate Research Seminar, and mentored incoming students through the CECAS Peer Mentoring Program.
-     </p> 
-    <p>
-      Following my PhD, I joined the Center for Fluid Mechanics at Brown University as a Hope Street Postdoctoral Fellow, working with <a href="https://sites.brown.edu/harrislab/">Dr. Daniel Harris</a>. My current projects investigate drop-substrate interactions and water entry dynamics, focusing on how non-wetting, deformable, or actively deformed substrates influence these phenomena, as well as how ambient gas conditions affect air-film-mediated processes like drop rebound.
-    </p>
-    <p>
-      I am eager to explore opportunities to collaborate. If you’re interested in working together, feel free to reach out: <a href="mailto:chase_gabbard@brown.edu">chase_gabbard@brown.edu</a>.
-    </p>
-  </div>
-  <div class="about-video">
-    <video width="100%" controls autoplay muted loop>
-      <source src="assets/Videos/FlowingBeads.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</main>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo/gablab-logo.png" alt="GabLab home" width="473" height="300">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="openings.html">Openings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <footer>
-    <p>Contact: <a href="mailto:chase_gabbard@brown.edu">chase_gabbard@brown.edu</a></p>
-    <p><a href="https://scholar.google.com/citations?user=RDiGou8AAAAJ&hl=en">Google Scholar</a> |
-       <a href="https://www.linkedin.com/in/chase-gabbard-229876115/">LinkedIn</a> |
-       <a href="https://github.com/chase-gabbard">GitHub</a> |
-       <a href="https://orcid.org/0009-0006-4412-4066">ORCID</a>
-    </p>
+  <main id="main">
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="wrap intro__grid">
+        <div class="intro__text">
+          <h1 class="intro__title" id="intro-title">We study how liquids move, deform, and break apart.</h1>
+          <div class="intro__body">
+            <p>GabLab is an experimental fluid mechanics group in the George W. Woodruff School of Mechanical Engineering at Georgia Tech, led by <a href="people.html">Chase T. Gabbard</a>. We focus on interfacial flow in multiphase and complex media: drops that bounce off liquid baths, spheres that plunge into water, films that bead up as they flow down fibers, and particle-laden interfaces that buckle and break.</p>
+            <p>Our mission is to uncover the fundamental mechanisms behind these flows by pairing careful experiments and high-speed imaging with rigorous analysis. What we learn informs industrial processes such as heat and mass transfer, explains phenomena seen in nature, and guides the design of systems that control fluid motion.</p>
+          </div>
+          <div class="intro__actions">
+            <a class="button" href="research.html">Explore our research</a>
+            <a class="button button--outline" href="openings.html">See open PhD positions</a>
+          </div>
+        </div>
+        <div class="intro__pillar" aria-hidden="true">
+          <video muted loop playsinline preload="none" poster="assets/web/home/flowing-beads.jpg" data-src="assets/web/home/flowing-beads.mp4" data-src-webm="assets/web/home/flowing-beads.webm"></video>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" aria-labelledby="showcase-title">
+      <div class="wrap">
+        <h2 class="visually-hidden" id="showcase-title">Research highlights</h2>
+        <!-- Slideshow: each <figure class="slide"> is one slide. To add one, copy a slide,
+             change the image, title, text and link, and add a matching thumbnail button below. -->
+        <div class="carousel" data-carousel data-interval="6500" aria-roledescription="carousel" aria-label="Research highlights">
+          <div class="carousel__viewport" aria-live="off">
+          <figure class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 8">
+            <div class="slide__media">
+              <img src="assets/web/slides/drop-bath.jpg" alt="A small drop bouncing above concentric ripples on a liquid bath, lit in purple and orange." width="1600" height="1015" fetchpriority="high">
+            </div>
+            <figcaption class="slide__caption">
+              <h3 class="slide__title">Drop–bath rebound</h3>
+              <p class="slide__text">A drop rebounds from a liquid bath on a thin cushion of air, leaving ripples behind.</p>
+              <a class="slide__link" href="research.html#drop-bath-impacts">Read about this project</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 8">
+            <div class="slide__media">
+              <img src="assets/web/slides/water-entry.jpg" alt="Four snapshots of a sphere entering water, its air cavity growing longer and then pinching off." width="1600" height="1376" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="slide__caption">
+              <h3 class="slide__title">Water entry</h3>
+              <p class="slide__text">A sphere plunges into water and drags down an air cavity that stretches and pinches off.</p>
+              <a class="slide__link" href="research.html#water-entry">Read about this project</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 8">
+            <div class="slide__media">
+              <img src="assets/web/slides/savarts-harp.jpg" alt="A clear liquid sheet curving sharply around a vertical jet against a blue background." width="1600" height="1312" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="slide__caption">
+              <h3 class="slide__title">Savart’s harp</h3>
+              <p class="slide__text">A liquid jet striking a small target spreads into a thin, sharply curved sheet.</p>
+              <a class="slide__link" href="research.html#liquid-sheets">Read about this project</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 of 8">
+            <div class="slide__media">
+              <img src="assets/web/slides/bead-patterns.jpg" alt="Three vertical fibers coated with liquid that has broken into glistening beads, on black." width="1356" height="1600" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="slide__caption">
+              <h3 class="slide__title">Bead-on-fiber patterns</h3>
+              <p class="slide__text">Liquid flowing down vertical fibers breaks up into trains of beads.</p>
+              <a class="slide__link" href="research.html#past-projects">See the related papers</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="5 of 8">
+            <div class="slide__media">
+              <img src="assets/web/slides/bouncing-drop.jpg" alt="A sequence of drop positions tracing a V as a drop bounces off a surface, on a peach background." width="1600" height="829" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="slide__caption">
+              <h3 class="slide__title">A bouncing drop</h3>
+              <p class="slide__text">Snapshots of a single drop bouncing on a nonwetting surface.</p>
+              <a class="slide__link" href="publications.html#pub-17">Read the paper</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="6 of 8">
+            <div class="slide__media">
+              <img src="assets/web/slides/wheel-of-frequency.jpg" alt="A circle divided into wedges, each showing blue concentric ripples on a liquid surface." width="1600" height="1596" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="slide__caption">
+              <h3 class="slide__title">Wheel of frequency</h3>
+              <p class="slide__text">Ripples on a liquid surface, with each wedge driven at a different frequency.</p>
+              <a class="slide__link" href="gallery.html">See more in the gallery</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="7 of 8">
+            <div class="slide__media">
+              <img src="assets/web/slides/particle-ejection.jpg" alt="A particle-coated cylinder face with a stream of white particles falling away below it, on black." width="1059" height="954" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="slide__caption">
+              <h3 class="slide__title">Particle ejection</h3>
+              <p class="slide__text">A cylinder pushed through a floating granular raft sheds a stream of particles.</p>
+              <a class="slide__link" href="publications.html#pub-12">Read the paper</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="8 of 8">
+            <div class="slide__media">
+              <img src="assets/web/slides/breaking-point.jpg" alt="A floating layer of particles curling over on itself like a breaking wave, on black." width="1088" height="616" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="slide__caption">
+              <h3 class="slide__title">The breaking point</h3>
+              <p class="slide__text">A floating layer of particles folds over on itself.</p>
+              <a class="slide__link" href="gallery.html">See more in the gallery</a>
+            </figcaption>
+          </figure>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__button" type="button" data-prev aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <span class="carousel__counter" data-counter>1 / 8</span>
+            <button class="carousel__button" type="button" data-next aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+            <button class="carousel__button carousel__play" type="button" data-play aria-label="Pause slideshow"><svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6.5" y="5" width="3.5" height="14" rx="1"/><rect x="14" y="5" width="3.5" height="14" rx="1"/></svg><svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></button>
+          </div>
+          <ul class="carousel__thumbs">
+          <li><button class="carousel__thumb" type="button" data-goto="0" aria-label="Show slide 1: Drop–bath rebound" aria-current="true"><img src="assets/web/slides/thumbs/drop-bath.jpg" alt="" width="320" height="203" loading="lazy" decoding="async"></button></li>
+          <li><button class="carousel__thumb" type="button" data-goto="1" aria-label="Show slide 2: Water entry" aria-current="false"><img src="assets/web/slides/thumbs/water-entry.jpg" alt="" width="320" height="275" loading="lazy" decoding="async"></button></li>
+          <li><button class="carousel__thumb" type="button" data-goto="2" aria-label="Show slide 3: Savart’s harp" aria-current="false"><img src="assets/web/slides/thumbs/savarts-harp.jpg" alt="" width="320" height="262" loading="lazy" decoding="async"></button></li>
+          <li><button class="carousel__thumb" type="button" data-goto="3" aria-label="Show slide 4: Bead-on-fiber patterns" aria-current="false"><img src="assets/web/slides/thumbs/bead-patterns.jpg" alt="" width="271" height="320" loading="lazy" decoding="async"></button></li>
+          <li><button class="carousel__thumb" type="button" data-goto="4" aria-label="Show slide 5: A bouncing drop" aria-current="false"><img src="assets/web/slides/thumbs/bouncing-drop.jpg" alt="" width="320" height="166" loading="lazy" decoding="async"></button></li>
+          <li><button class="carousel__thumb" type="button" data-goto="5" aria-label="Show slide 6: Wheel of frequency" aria-current="false"><img src="assets/web/slides/thumbs/wheel-of-frequency.jpg" alt="" width="320" height="319" loading="lazy" decoding="async"></button></li>
+          <li><button class="carousel__thumb" type="button" data-goto="6" aria-label="Show slide 7: Particle ejection" aria-current="false"><img src="assets/web/slides/thumbs/particle-ejection.jpg" alt="" width="320" height="288" loading="lazy" decoding="async"></button></li>
+          <li><button class="carousel__thumb" type="button" data-goto="7" aria-label="Show slide 8: The breaking point" aria-current="false"><img src="assets/web/slides/thumbs/breaking-point.jpg" alt="" width="320" height="181" loading="lazy" decoding="async"></button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="join" aria-labelledby="join-title">
+      <div class="wrap join__inner">
+        <div>
+          <h2 id="join-title">Join the lab</h2>
+          <p>We’re recruiting multiple PhD students to start in Fall 2027. If you want to build experiments and see fluid physics up close, we’d love to hear from you.</p>
+        </div>
+        <a class="button" href="openings.html">See open positions</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <div>
+        <a class="site-footer__logo" href="index.html">
+          <img src="assets/logo/gablab-logo-white.png" alt="GabLab home" width="473" height="300" loading="lazy">
+        </a>
+        <address>
+          George W. Woodruff School of Mechanical Engineering<br>
+          Georgia Institute of Technology<br>
+          Atlanta, Georgia
+        </address>
+      </div>
+      <div>
+        <h2 class="footer-heading">Contact</h2>
+        <ul class="footer-list">
+          <li><a href="mailto:chase_gabbard@brown.edu">chase_gabbard@brown.edu</a></li>
+          <li><a href="openings.html">Open positions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-heading">Profiles</h2>
+        <ul class="footer-list">
+          <li><a href="https://scholar.google.com/citations?user=RDiGou8AAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://www.linkedin.com/in/chase-gabbard-229876115/">LinkedIn</a></li>
+          <li><a href="https://github.com/chase-gabbard">GitHub</a></li>
+          <li><a href="https://orcid.org/0009-0006-4412-4066">ORCID</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="site-footer__base">
+        <p>&copy; <span data-year>2026</span> GabLab</p>
+        <p>Principal Investigator: Chase T. Gabbard</p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

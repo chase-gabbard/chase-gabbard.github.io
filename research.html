@@ -1,103 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research – Chase T. Gabbard</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | GabLab, Georgia Tech</title>
+  <meta name="description" content="Research in GabLab: interfacial dynamics, multiphase transport phenomena, and complex fluids, studied through careful experiments and analysis.">
+  <meta name="author" content="Chase T. Gabbard">
+  <link rel="canonical" href="https://chase-gabbard.github.io/research.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GabLab">
+  <meta property="og:url" content="https://chase-gabbard.github.io/research.html">
+  <meta property="og:title" content="Research | GabLab, Georgia Tech">
+  <meta property="og:description" content="Research in GabLab: interfacial dynamics, multiphase transport phenomena, and complex fluids, studied through careful experiments and analysis.">
+  <meta property="og:image" content="https://chase-gabbard.github.io/assets/logo/gablab-social.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Research | GabLab, Georgia Tech">
+  <meta name="twitter:description" content="Research in GabLab: interfacial dynamics, multiphase transport phenomena, and complex fluids, studied through careful experiments and analysis.">
+  <meta name="twitter:image" content="https://chase-gabbard.github.io/assets/logo/gablab-social.png">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="assets/fonts/outfit-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/site.js?v=3" defer></script>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-    </ul>
-  </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <main class="research-content">
-    <h1>Research</h1>
-    <p>
-      My research is motivated by the societal need to understand the <b>physics of interfacial flow in multiphase and complex media</b>. Through a combination of careful experimentation and rigorous analysis, I investigate fundamental problems with broad implications, including industrial processes such as heat and mass transfer, the behavior of natural phenomena, and the design of systems for controlled fluid motion. Within this overarching mission, my current research themes are:
-    </p>
-    <ul>
-      <li>Interfacial Dynamics</li>
-      <li>Multiphase Transport Phenomena</li>
-      <li>Complex Fluids</li>
-    </ul>
-    
-    <h2>Ongoing Projects</h2>
-<div class="project-box">
-  <img src="assets/Videos/PurpleDrop.gif" alt="Drop–bath impacts" class="project-image">
-  <div class="project-text">
-    <h3>Drop–bath impacts</h3>
-    <p>We investigate how the surrounding gas influences the impact dynamics of submillimeter drops on a liquid bath. 
-      Using a vacuum chamber, we systematically vary the gas type and pressure to examine transitions between coalescence, bouncing, and transient floating. Experimental results are directly compared with a computational model that captures air-layer evolution through a lubrication framework incorporating nanoscale gas kinetic effects and disjoining pressure. </p>
-  </div>
-</div>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo/gablab-logo.png" alt="GabLab home" width="473" height="300">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html" aria-current="page">Research</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="openings.html">Openings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<div class="project-box">
-  <img src="assets/Videos/WaterEntry.gif" alt="Water entry" class="project-image">
-  <div class="project-text">
-    <h3>Water entry</h3>
-    <p>A solid sphere impacting a quiescent bath can form an air cavity whose evolution depends on the impact conditions and sphere wettability. 
-      This project investigates how modifying the bath surface, either through active deformation or coating the surface with a secondary medium, affects cavity dynamics and can dramatically alter the physical mechanisms governing cavity closure.</p>
-  </div>
-</div>
+  <main id="main">
+  <header class="page-head">
+    <div class="wrap">
+      <h1>Research</h1>
+      <p class="lede">Our research is motivated by the societal need to understand the physics of interfacial flow in multiphase and complex media. Through a combination of careful experimentation and rigorous analysis, we investigate fundamental problems with broad implications, including industrial processes such as heat and mass transfer, the behavior of natural phenomena, and the design of systems for controlled fluid motion.</p>
+    </div>
+  </header>
 
-<div class="project-box">
-  <img src="assets/Videos/WaterBell.gif" alt="Liquid sheets and bells" class="project-image">
-  <div class="project-text">
-    <h3>Liquid sheets and bells</h3>
-    <p> We study the formation, breakup, and stability of axisymmetric liquid sheets and bell-like structures generated by the impact of a liquid jet on a small target. Our research focuses on how the geometry of the impactor controls the dynamics and stability of the resulting sheet, and how the two-way coupling between fluid ejection and solid shape can be harnessed to manipulate liquid flows and design responsive, force-generating surfaces. </p>
-  </div>
-</div>
+    <section class="section" aria-labelledby="themes-title">
+      <div class="wrap">
+        <h2 class="visually-hidden" id="themes-title">Research themes</h2>
+        <p class="themes-intro">Within this overarching mission, our current research themes are:</p>
+        <ul class="themes">
+          <li>Interfacial dynamics</li>
+          <li>Multiphase transport phenomena</li>
+          <li>Complex fluids</li>
+        </ul>
+      </div>
+    </section>
 
-<div class="project-box">
-  <img src="assets/Videos/RaftPerforation.gif" alt="Granular interfaces" class="project-image">
-  <div class="project-text">
-    <h3>Controlling granular interfaces</h3>
-    <p>An interface coated with a monolayer of granular particles exhibits a range of useful mechanical properties. In this project, we use a variety of probes to mechanically manipulate the granular interface by imposing local interfacial height gradients. The ability to perforate these interfaces is tested as a new method for modifying local particle concentrations—a potential route for tailoring overall interfacial properties.</p>
-  </div>
-  </div>
+    <section class="section" aria-labelledby="ongoing">
+      <div class="wrap">
+        <h2 class="section-title" id="ongoing">Ongoing projects</h2>
+        <ul class="projects">
+        <li class="project" id="drop-bath-impacts">
+          <div class="project__media">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/web/research/drop-bath.jpg" aria-label="High-speed video of a small drop bouncing on a liquid bath">
+              <source src="assets/web/research/drop-bath.mp4" type="video/mp4">
+              <source src="assets/web/research/drop-bath.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="project__text">
+            <h3 class="project__title">Drop–bath impacts</h3>
+            <p>We investigate how the surrounding gas influences the impact dynamics of submillimeter drops on a liquid bath. Using a vacuum chamber, we systematically vary the gas type and pressure to examine transitions between coalescence, bouncing, and transient floating. Experimental results are directly compared with a computational model that captures air-layer evolution through a lubrication framework incorporating nanoscale gas kinetic effects and disjoining pressure.</p>
+          </div>
+        </li>
+        <li class="project" id="water-entry">
+          <div class="project__media">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/web/research/water-entry.jpg" aria-label="High-speed video of a sphere entering water and forming an air cavity">
+              <source src="assets/web/research/water-entry.mp4" type="video/mp4">
+              <source src="assets/web/research/water-entry.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="project__text">
+            <h3 class="project__title">Water entry</h3>
+            <p>A solid sphere impacting a quiescent bath can form an air cavity whose evolution depends on the impact conditions and sphere wettability. This project investigates how modifying the bath surface, either through active deformation or coating the surface with a secondary medium, affects cavity dynamics and can dramatically alter the physical mechanisms governing cavity closure.</p>
+          </div>
+        </li>
+        <li class="project" id="liquid-sheets">
+          <div class="project__media">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/web/research/water-bell.jpg" aria-label="High-speed video of a liquid bell formed by a jet striking a target">
+              <source src="assets/web/research/water-bell.mp4" type="video/mp4">
+              <source src="assets/web/research/water-bell.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="project__text">
+            <h3 class="project__title">Liquid sheets and bells</h3>
+            <p>We study the formation, breakup, and stability of axisymmetric liquid sheets and bell-like structures generated by the impact of a liquid jet on a small target. Our research focuses on how the geometry of the impactor controls the dynamics and stability of the resulting sheet, and how the two-way coupling between fluid ejection and solid shape can be harnessed to manipulate liquid flows and design responsive, force-generating surfaces.</p>
+          </div>
+        </li>
+        <li class="project" id="granular-interfaces">
+          <div class="project__media">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/web/research/raft-perforation.jpg" aria-label="High-speed video of a probe perforating a granular raft">
+              <source src="assets/web/research/raft-perforation.mp4" type="video/mp4">
+              <source src="assets/web/research/raft-perforation.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="project__text">
+            <h3 class="project__title">Controlling granular interfaces</h3>
+            <p>An interface coated with a monolayer of granular particles exhibits a range of useful mechanical properties. In this project, we use a variety of probes to mechanically manipulate the granular interface by imposing local interfacial height gradients. The ability to perforate these interfaces is tested as a new method for modifying local particle concentrations—a potential route for tailoring overall interfacial properties.</p>
+          </div>
+        </li>
+        <li class="project" id="bead-on-fiber-aerodynamics">
+          <div class="project__media">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/web/research/counterflow-beads.jpg" aria-label="High-speed video of liquid beads on a fiber in a counterflow of air">
+              <source src="assets/web/research/counterflow-beads.mp4" type="video/mp4">
+              <source src="assets/web/research/counterflow-beads.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="project__text">
+            <h3 class="project__title">Aerodynamic effects on bead-on-fiber flow</h3>
+            <p>Building on our previous work on the dynamics and morphology of liquid bead-on-fiber flows, we are investigating their potential in heat and mass transfer applications. Using a custom wind column, we explore how a counterflow alters the propagation and properties of bead patterns. These flow modifications are then evaluated for their implications in using bead-on-fiber systems for particle scrubbing.</p>
+          </div>
+        </li>
+        </ul>
+      </div>
+    </section>
 
-  <div class="project-box">
-  <img src="assets/Videos/CounterflowBeads.gif" alt="Aerodynamic effects" class="project-image">
-  <div class="project-text">
-    <h3>Aerodynamic effects on bead-on-fiber flow </h3>
-    <p> Building on our previous work on the dynamics and morphology of liquid bead-on-fiber flows, we are investigating their potential in heat and mass transfer applications. Using a custom wind column, we explore how a counterflow alters the propagation and properties of bead patterns. These flow modifications are then evaluated for their implications in using bead-on-fiber systems for particle scrubbing.   </p>
-  </div>
-</div>
-
-
-    <h2>Past Projects</h2>
-    <ul>
-      <li> Drop rebound <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/drop-rebound-at-low-weber-number/4C6748D4E451894CD52E8E416F875F9E">(Gabbard <em>et al.</em> 2025)</a>, <a href="https://arxiv.org/abs/2509.22826">(Aguero <em>et al.</em> 2025)</a></li>
-
-      <li> Morphology and dynamics of liquid bead-on-fiber patterns <a href="https://link.springer.com/article/10.1007/s00348-021-03234-3">(Gabbard & Bostwick 2021)</a>, <a href="https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.6.034005">(Gabbard & Bostwick 2021)</a>, <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/beadonfibre-morphology-in-shearthinning-flow/6F6CDEB0E9B07D98942FD63824A4F36E">(Gabbard & Bostwick 2023)</a>, <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/scaling-analysis-for-the-frequency-of-ostwaldian-and-newtonian-beadonfibre-flows/04339D480D9A5F2799F6260CE06A50A0">(Gabbard <em>et al.</em> 2025)</a></li>
-      
-      <li> Capillary phenomena in liquid flowing down fiber pairs <a href="https://gfm.aps.org/meetings/dfd-2022/6323dd36199e4c2c0873fadc">(GFM 2022)</a>, <a href="https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.8.110505E">(Gabbard & Bostwick 2023)</a>, <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/gravitydriven-flow-of-liquid-bridges-between-vertical-fibres/EBFFAE4F605AF2C52549327CB27E11E9">(Gabbard & Bostwick 2024)</a>, <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/suppressing-capillary-instability-in-falling-liquid-threads/39FEDC36019508B406D5E51F478EE3CF">(Gabbard <em>et al.</em> 2024)</a></li>
-    
-      <li>Particle capature via dip coating of viscous and non-Newtonian solutions <a href="https://www.sciencedirect.com/science/article/pii/S092777572300969X">(Copeland <em>et al.</em> 2023)</a>, <a href="https://pubs.rsc.org/en/content/articlehtml/2024/sm/d4sm00941j">(Ding <em>et al.</em> 2024)</a></li>
-
-      <li>Particle capture using bead-on-fiber flow <a href="https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.70062?utm_source=researchgate">(Gabbard <em>et al.</em> 2025)</a></li>
-      
-      <li>Microfluidics: electrophoresis of microparticles and electrokinetic flow instabilities <a href="https://pubs.aip.org/aip/pof/article/34/3/032006/2844679">(Dacus <em>et al.</em> 2022)</a>, <a href="https://pubs.acs.org/doi/full/10.1021/acs.langmuir.4c02334">(Bentor <em>et al.</em> 2024)</a>, <a href="https://pubs.rsc.org/en/content/articlehtml/2025/sm/d4sm01162g">(Chen <em>et al.</em> 2025a)</a>, <a href="https://pubs.aip.org/aip/pof/article/37/6/062016/3350106">(Chen <em>et al.</em> 2025b)</a> </li>
-      
-      <li>Particle-laden interface dynamics and stability <a href="https://gfm.aps.org/meetings/dfd-2023/65008525199e4c5173edfc6f">(GFM 2023)</a>, <a href="https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.9.110505">(Gabbard <em>et al.</em> 2024)</a>, <a href="https://journals.aps.org/prapplied/abstract/10.1103/fqsp-wz3v">(Gabbard <em>et al.</em> 2025)</a>, <a href="https://journals.aps.org/prfluids/abstract/10.1103/hcyb-7nhz">(Reyner <em>et al.</em> 2026)</a></li>
-      
-    </ul>
+    <section class="section" aria-labelledby="past-projects">
+      <div class="wrap">
+        <h2 class="section-title" id="past-projects">Past projects</h2>
+        <ul class="past">
+        <li>
+          <span class="past__title">Drop rebound</span>
+          <ul class="chips"><li><a class="chip" href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/drop-rebound-at-low-weber-number/4C6748D4E451894CD52E8E416F875F9E">Gabbard <em>et al.</em> 2025</a></li><li><a class="chip" href="https://arxiv.org/abs/2509.22826">Aguero <em>et al.</em> 2025</a></li></ul>
+        </li>
+        <li>
+          <span class="past__title">Morphology and dynamics of liquid bead-on-fiber patterns</span>
+          <ul class="chips"><li><a class="chip" href="https://link.springer.com/article/10.1007/s00348-021-03234-3">Gabbard &amp; Bostwick 2021</a></li><li><a class="chip" href="https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.6.034005">Gabbard &amp; Bostwick 2021</a></li><li><a class="chip" href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/beadonfibre-morphology-in-shearthinning-flow/6F6CDEB0E9B07D98942FD63824A4F36E">Gabbard &amp; Bostwick 2023</a></li><li><a class="chip" href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/scaling-analysis-for-the-frequency-of-ostwaldian-and-newtonian-beadonfibre-flows/04339D480D9A5F2799F6260CE06A50A0">Gabbard <em>et al.</em> 2025</a></li></ul>
+        </li>
+        <li>
+          <span class="past__title">Capillary phenomena in liquid flowing down fiber pairs</span>
+          <ul class="chips"><li><a class="chip" href="https://gfm.aps.org/meetings/dfd-2022/6323dd36199e4c2c0873fadc">GFM 2022</a></li><li><a class="chip" href="https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.8.110505">Gabbard &amp; Bostwick 2023</a></li><li><a class="chip" href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/gravitydriven-flow-of-liquid-bridges-between-vertical-fibres/EBFFAE4F605AF2C52549327CB27E11E9">Gabbard &amp; Bostwick 2024</a></li><li><a class="chip" href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/suppressing-capillary-instability-in-falling-liquid-threads/39FEDC36019508B406D5E51F478EE3CF">Gabbard <em>et al.</em> 2024</a></li></ul>
+        </li>
+        <li>
+          <span class="past__title">Particle capture via dip coating of viscous and non-Newtonian solutions</span>
+          <ul class="chips"><li><a class="chip" href="https://www.sciencedirect.com/science/article/pii/S092777572300969X">Copeland <em>et al.</em> 2023</a></li><li><a class="chip" href="https://pubs.rsc.org/en/content/articlehtml/2024/sm/d4sm00941j">Ding <em>et al.</em> 2024</a></li></ul>
+        </li>
+        <li>
+          <span class="past__title">Particle capture using bead-on-fiber flow</span>
+          <ul class="chips"><li><a class="chip" href="https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.70062">Gabbard <em>et al.</em> 2025</a></li></ul>
+        </li>
+        <li>
+          <span class="past__title">Microfluidics: electrophoresis of microparticles and electrokinetic flow instabilities</span>
+          <ul class="chips"><li><a class="chip" href="https://pubs.aip.org/aip/pof/article/34/3/032006/2844679">Dacus <em>et al.</em> 2022</a></li><li><a class="chip" href="https://pubs.acs.org/doi/full/10.1021/acs.langmuir.4c02334">Bentor <em>et al.</em> 2024</a></li><li><a class="chip" href="https://pubs.rsc.org/en/content/articlehtml/2025/sm/d4sm01162g">Chen <em>et al.</em> 2025a</a></li><li><a class="chip" href="https://pubs.aip.org/aip/pof/article/37/6/062016/3350106">Chen <em>et al.</em> 2025b</a></li></ul>
+        </li>
+        <li>
+          <span class="past__title">Particle-laden interface dynamics and stability</span>
+          <ul class="chips"><li><a class="chip" href="https://gfm.aps.org/meetings/dfd-2023/65008525199e4c5173edfc6f">GFM 2023</a></li><li><a class="chip" href="https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.9.110505">Gabbard <em>et al.</em> 2024</a></li><li><a class="chip" href="https://journals.aps.org/prapplied/abstract/10.1103/fqsp-wz3v">Gabbard <em>et al.</em> 2025</a></li><li><a class="chip" href="https://journals.aps.org/prfluids/abstract/10.1103/hcyb-7nhz">Reyner <em>et al.</em> 2026</a></li></ul>
+        </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>Contact: <a href="mailto:chase_gabbard@brown.edu">chase_gabbard@brown.edu</a></p>
-    <p>
-      <a href="https://scholar.google.com/citations?user=RDiGou8AAAAJ&hl=en">Google Scholar</a> |
-      <a href="https://www.linkedin.com/in/chase-gabbard-229876115/">LinkedIn</a> |
-      <a href="https://github.com/chase-gabbard">GitHub</a> |
-      <a href="https://orcid.org/0009-0006-4412-4066">ORCID</a>
-    </p>
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <div>
+        <a class="site-footer__logo" href="index.html">
+          <img src="assets/logo/gablab-logo-white.png" alt="GabLab home" width="473" height="300" loading="lazy">
+        </a>
+        <address>
+          George W. Woodruff School of Mechanical Engineering<br>
+          Georgia Institute of Technology<br>
+          Atlanta, Georgia
+        </address>
+      </div>
+      <div>
+        <h2 class="footer-heading">Contact</h2>
+        <ul class="footer-list">
+          <li><a href="mailto:chase_gabbard@brown.edu">chase_gabbard@brown.edu</a></li>
+          <li><a href="openings.html">Open positions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-heading">Profiles</h2>
+        <ul class="footer-list">
+          <li><a href="https://scholar.google.com/citations?user=RDiGou8AAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://www.linkedin.com/in/chase-gabbard-229876115/">LinkedIn</a></li>
+          <li><a href="https://github.com/chase-gabbard">GitHub</a></li>
+          <li><a href="https://orcid.org/0009-0006-4412-4066">ORCID</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="site-footer__base">
+        <p>&copy; <span data-year>2026</span> GabLab</p>
+        <p>Principal Investigator: Chase T. Gabbard</p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
