@@ -1159,6 +1159,35 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   .pi__photo { max-width: 320px; }
 }
 
+.collaborators {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: clamp(28px, 3.5vw, 48px) clamp(24px, 3vw, 40px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.collaborator {
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.collaborator__name {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.015em;
+}
+.collaborator__title {
+  margin: 0 0 0.7rem;
+  color: var(--graphite);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.collaborator__topic {
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
 /* ---------- Openings ---------- */
 
 .facts {
