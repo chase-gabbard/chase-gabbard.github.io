@@ -1102,8 +1102,12 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   font-weight: 500;
 }
 .pi__title {
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.75rem;
   color: var(--graphite);
+}
+.pi__email {
+  margin: 0 0 1.25rem;
+  overflow-wrap: anywhere;
 }
 .pi__links { margin-bottom: 2rem; }
 .pi__bio p {
