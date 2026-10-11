@@ -1193,6 +1193,14 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   font-size: 1.0625rem;
   line-height: 1.55;
 }
+.collaborator__papers {
+  gap: 6px;
+  margin-top: 0.9rem;
+}
+.chip--sm {
+  padding: 0.3em 0.75em;
+  font-size: 0.8125rem;
+}
 
 /* Collaborator map: a full-globe map with a gold pin at each collaborator's university */
 .collab-map { margin: clamp(40px, 5vw, 64px) 0 0; }
