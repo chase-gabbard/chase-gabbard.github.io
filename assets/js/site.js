@@ -308,6 +308,42 @@
     update();
   });
 
+  /* ---------- Tabs (graduate application info) ---------- */
+  $all('[data-tabs]').forEach(function (root) {
+    var tabs = $all('[role="tab"]', root);
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+
+    function select(i, focus) {
+      tabs.forEach(function (t, k) {
+        var on = k === i;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        panels[k].classList.toggle('is-active', on);
+        panels[k].hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { select(i, false); });
+      tab.addEventListener('keydown', function (e) {
+        var k = null;
+        if (e.key === 'ArrowRight') k = (i + 1) % tabs.length;
+        if (e.key === 'ArrowLeft') k = (i - 1 + tabs.length) % tabs.length;
+        if (e.key === 'Home') k = 0;
+        if (e.key === 'End') k = tabs.length - 1;
+        if (k !== null) {
+          e.preventDefault();
+          select(k, true);
+        }
+      });
+    });
+
+    var start = 0;
+    tabs.forEach(function (t, k) { if (t.getAttribute('aria-selected') === 'true') start = k; });
+    select(start, false);
+  });
+
   /* ---------- Image viewer ---------- */
   var viewerLinks = $all('a[data-lightbox]');
   if (viewerLinks.length && typeof window.HTMLDialogElement === 'function') {

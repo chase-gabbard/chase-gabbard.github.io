@@ -1576,12 +1576,6 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   font-weight: 600;
   line-height: 1;
 }
-.member__button {
-  min-height: 46px;
-  margin-top: 26px;
-  font-size: 1rem;
-}
-
 @media (max-width: 900px) {
   .member__grid { grid-template-columns: minmax(0, 1fr); }
   .member__join { position: static; }
@@ -1722,6 +1716,207 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
 }
 @media (max-width: 420px) {
   .program__facts div { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Tabs at the bottom of the graduate section: how to apply, and when */
+.apply-tabs { margin-top: clamp(48px, 6vw, 80px); }
+.apply-tabs .apply-tabs__title {
+  margin-bottom: 4px;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.apply-tabs__list { display: none; }
+.js .apply-tabs__list {
+  display: flex;
+  gap: clamp(22px, 3vw, 40px);
+  border-bottom: 1px solid var(--line);
+}
+.apply-tabs__tab {
+  position: relative;
+  padding: 14px 0 13px;
+  border: 0;
+  background: none;
+  color: var(--graphite);
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.apply-tabs__tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+.apply-tabs__tab:hover,
+.apply-tabs__tab[aria-selected="true"] { color: var(--ink); }
+.apply-tabs__tab[aria-selected="true"]::after { transform: scaleX(1); }
+.apply-tabs__tab:focus-visible { outline-offset: 2px; }
+.apply-tabs__panel { padding-top: 28px; }
+.js .apply-tabs__panel:not(.is-active) { display: none; }
+.apply-tabs__fallback {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+}
+.js .apply-tabs__fallback { display: none; }
+
+.apply-how {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+.apply-facts { margin: 0; }
+.apply-facts div {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: 2px 20px;
+  padding-block: 12px;
+  border-top: 1px solid var(--line);
+}
+.apply-facts div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.apply-facts dt {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+.apply-facts dd {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.apply-links {
+  padding: 22px 24px 24px;
+  background: var(--mist);
+}
+.apply-links__title {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+.apply-links ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.apply-links li a {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.apply-links__contact {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--graphite);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Application timeline */
+.timeline__intro {
+  margin: 0 0 22px;
+  color: var(--graphite);
+  font-size: 1rem;
+}
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.timeline__item {
+  display: grid;
+  grid-template-columns: 10.5rem minmax(0, 1fr);
+  column-gap: 28px;
+}
+.timeline__when {
+  margin: 0;
+  padding-top: 1px;
+  color: var(--gold-text);
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: right;
+}
+.timeline__what {
+  position: relative;
+  padding: 0 0 26px 28px;
+  border-left: 2px solid var(--line);
+}
+.timeline__item:last-child .timeline__what { padding-bottom: 0; }
+.timeline__what::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 3px var(--paper);
+}
+.timeline__item--key .timeline__what::before { background: var(--ink); }
+.timeline__title {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.timeline__what p {
+  max-width: 68ch;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 860px) {
+  .apply-how { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .apply-facts div { grid-template-columns: minmax(0, 1fr); }
+  .timeline__item {
+    display: block;
+    position: relative;
+    padding: 0 0 24px 28px;
+    border-left: 2px solid var(--line);
+  }
+  .timeline__item:last-child { padding-bottom: 0; }
+  .timeline__item::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 3px var(--paper);
+  }
+  .timeline__item--key::before { background: var(--ink); }
+  .timeline__when {
+    margin-bottom: 2px;
+    text-align: left;
+  }
+  .timeline__what {
+    padding: 0;
+    border-left: 0;
+  }
+  .timeline__what::before { display: none; }
 }
 
 /* Course numbers and quick facts for the ways to do research */
