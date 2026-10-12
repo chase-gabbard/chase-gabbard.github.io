@@ -263,6 +263,51 @@
     if (wide.addEventListener) wide.addEventListener('change', cleanup);
   });
 
+  /* ---------- Prospective students: section bar ----------
+     Appears once the page title scrolls under it and underlines the section being read. */
+  $all('[data-local-nav]').forEach(function (bar) {
+    var list = bar.querySelector('.local-nav__links');
+    var links = $all('a', list);
+    var sections = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    var trigger = document.querySelector('[data-local-nav-trigger]');
+    var current = -2;
+    var queued = false;
+
+    function update() {
+      queued = false;
+      var height = bar.offsetHeight;
+      bar.classList.toggle('is-visible', !trigger || trigger.getBoundingClientRect().bottom < height);
+
+      var line = height + 40;
+      var index = -1;
+      sections.forEach(function (section, i) {
+        if (section && section.getBoundingClientRect().top <= line) index = i;
+      });
+      var doc = document.documentElement;
+      if (index >= 0 && window.innerHeight + window.pageYOffset >= doc.scrollHeight - 2) index = sections.length - 1;
+
+      if (index === current) return;
+      current = index;
+      links.forEach(function (a, i) {
+        if (i === index) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+      if (index >= 0 && list.scrollWidth > list.clientWidth) {
+        list.scrollLeft = links[index].parentNode.offsetLeft - 16;
+      }
+    }
+
+    function queue() {
+      if (!queued) {
+        queued = true;
+        window.requestAnimationFrame(update);
+      }
+    }
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue);
+    update();
+  });
+
   /* ---------- Image viewer ---------- */
   var viewerLinks = $all('a[data-lightbox]');
   if (viewerLinks.length && typeof window.HTMLDialogElement === 'function') {

@@ -307,6 +307,10 @@ strong, b { font-weight: 700; }
     --header-height: 88px;
     --logo-height: 60px;
   }
+}
+
+/* The full menu needs about 1050px on one line, so narrower screens get the Menu button. */
+@media (max-width: 1100px) {
   .js .nav-toggle { display: inline-flex; }
   .js .site-nav {
     display: none;
@@ -1400,6 +1404,342 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
     border-left: 0;
   }
   .facts div + div { border-top: 1px solid var(--line); }
+}
+
+/* ---------- Prospective students ---------- */
+
+.nowrap { white-space: nowrap; }
+
+/* Bar with links to each section. It slides in once the page title scrolls under it. */
+.local-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: transform 0.25s ease, visibility 0s linear 0.25s;
+}
+.local-nav.is-visible {
+  transform: none;
+  visibility: visible;
+  transition: transform 0.25s ease;
+}
+.local-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.local-nav__title {
+  flex: none;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.local-nav__title:hover { color: var(--gold-text); }
+.local-nav__links {
+  position: relative;
+  display: flex;
+  gap: clamp(18px, 2.4vw, 34px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.local-nav__links::-webkit-scrollbar { display: none; }
+.local-nav__links a {
+  position: relative;
+  display: block;
+  padding: 19px 0 17px;
+  color: var(--graphite);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.local-nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+.local-nav__links a:hover,
+.local-nav__links a[aria-current="true"] { color: var(--ink); }
+.local-nav__links a:hover::after,
+.local-nav__links a[aria-current="true"]::after { transform: scaleX(1); }
+.local-nav__links a:focus-visible { outline-offset: -3px; }
+
+@media (max-width: 1000px) {
+  .local-nav__title { display: none; }
+}
+@media (max-width: 760px) {
+  .local-nav .wrap { padding-inline: 0; }
+  .local-nav__links {
+    padding-inline: var(--gutter);
+    /* soften the edges so links scrolled partly out of view fade instead of being cut */
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--gutter), #000 calc(100% - var(--gutter)), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 var(--gutter), #000 calc(100% - var(--gutter)), transparent);
+  }
+  .local-nav__links a { font-size: 0.9375rem; }
+}
+
+/* Links to a section stop just below the bar */
+:root:has(.local-nav) { scroll-padding-top: 62px; }
+
+/* One section per member type: how to join on the left, click-to-open lists on the right */
+.member { padding-block: clamp(48px, 6vw, 88px); }
+.member + .member { border-top: 1px solid var(--line); }
+.member__head { margin-bottom: clamp(28px, 3.5vw, 44px); }
+.member__title {
+  margin: 0;
+  font-size: clamp(2.1rem, 1.4rem + 2.3vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+.member__goal {
+  margin: 0.5em 0 0;
+  color: var(--gold-text);
+  font-size: clamp(1.2rem, 1.08rem + 0.4vw, 1.45rem);
+  font-style: italic;
+  line-height: 1.35;
+}
+.member__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 5.5vw, 88px);
+  align-items: start;
+}
+/* keep the steps in view while a long list is open beside them */
+.member__join {
+  position: sticky;
+  top: 86px;
+}
+.member__subhead {
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.member__more .member__subhead { margin-bottom: 0; }
+.member__lead {
+  margin: 0 0 1rem;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+.steps li {
+  position: relative;
+  min-height: 28px;
+  margin-bottom: 0.9rem;
+  padding-left: 42px;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  counter-increment: step;
+}
+.steps li:last-child { margin-bottom: 0; }
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.member__button {
+  min-height: 46px;
+  margin-top: 26px;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .member__grid { grid-template-columns: minmax(0, 1fr); }
+  .member__join { position: static; }
+}
+
+/* Click-to-open lists */
+.dropdown { border-bottom: 1px solid var(--line); }
+.dropdown > summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 2px 17px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.dropdown > summary::-webkit-details-marker { display: none; }
+.dropdown__title {
+  flex: 1;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.3;
+  transition: color 0.15s ease;
+}
+.dropdown__count {
+  flex: none;
+  color: var(--graphite);
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  white-space: nowrap;
+}
+.dropdown__icon {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  color: var(--gold-text);
+  transition: transform 0.25s ease;
+}
+.dropdown > summary:hover .dropdown__title { color: var(--gold-text); }
+.dropdown[open] > summary .dropdown__title { font-weight: 600; }
+.dropdown[open] > summary .dropdown__icon { transform: rotate(180deg); }
+.dropdown > summary:focus-visible { outline-offset: 2px; }
+
+.dropdown__body {
+  margin-bottom: 18px;
+  padding: 6px clamp(18px, 2.4vw, 28px) 24px;
+  background: var(--mist);
+}
+
+/* Open and close smoothly where the browser supports it */
+@supports (interpolate-size: allow-keywords) {
+  .dropdown { interpolate-size: allow-keywords; }
+  .dropdown::details-content {
+    block-size: 0;
+    overflow-y: clip;
+    transition: block-size 0.3s ease, content-visibility 0.3s ease allow-discrete;
+  }
+  .dropdown[open]::details-content { block-size: auto; }
+}
+
+.dropdown__intro,
+.dropdown__text {
+  margin: 14px 0 0;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.dropdown__intro { color: var(--graphite); }
+.dropdown__note {
+  margin: 16px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.dropdown__note strong { font-family: var(--font-display); font-weight: 600; }
+.dropdown__body .chips { margin-top: 16px; }
+
+/* Programs inside a list: name and description, with key facts underneath */
+.programs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.program {
+  padding-block: 18px;
+  border-top: 1px solid var(--line);
+}
+.program:first-child { border-top: 0; }
+.program__name {
+  margin: 0 0 0.35rem;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+.program__name a { text-decoration-color: transparent; }
+.program__name a:hover { text-decoration-color: currentColor; }
+.program__icon {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.3em;
+  color: var(--gold-text);
+  vertical-align: -0.02em;
+}
+.program__desc {
+  margin: 0;
+  color: var(--graphite);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.program__more {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+.program__facts {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+.program__facts div {
+  display: grid;
+  grid-template-columns: 6.75rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: 2px 14px;
+}
+.program__facts dt {
+  color: var(--graphite);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.program__facts dd {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+@media (max-width: 420px) {
+  .program__facts div { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Course numbers and quick facts for the ways to do research */
+.codes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 10px;
+  padding: 0;
+  list-style: none;
+}
+.codes li {
+  padding: 0.25em 0.65em;
+  background: var(--paper);
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 /* ---------- Contact ---------- */
