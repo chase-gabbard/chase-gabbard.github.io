@@ -1602,6 +1602,15 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   counter-increment: step;
 }
 .steps li:last-child { margin-bottom: 0; }
+.steps li strong { font-family: var(--font-display); font-weight: 600; }
+.steps__note {
+  margin: 1.25rem 0 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--gold);
+  background: var(--mist);
+  font-size: 1rem;
+  line-height: 1.55;
+}
 .steps li::before {
   content: counter(step);
   position: absolute;
