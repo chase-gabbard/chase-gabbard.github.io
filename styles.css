@@ -364,14 +364,12 @@ strong, b { font-weight: 700; }
   letter-spacing: -0.04em;
 }
 .page-head .lede {
-  max-width: 62ch;
+  max-width: none;   /* runs the full width of the page's content */
   margin: clamp(20px, 2.5vw, 32px) 0 0;
   color: var(--graphite);
   font-size: var(--page-lede-size);
   line-height: 1.55;
 }
-/* An intro that runs the full width of the page's content (Research page) */
-.page-head .lede--full { max-width: none; }
 
 /* ---------- Sections and running text ---------- */
 
