@@ -370,6 +370,8 @@ strong, b { font-weight: 700; }
   font-size: var(--page-lede-size);
   line-height: 1.55;
 }
+/* An intro that runs the full width of the page's content (Research page) */
+.page-head .lede--full { max-width: none; }
 
 /* ---------- Sections and running text ---------- */
 
@@ -828,11 +830,13 @@ html:not(.js) .slide__caption { padding-bottom: 0; }
   aspect-ratio: 1 / 1;
   background: #000;
 }
+/* Videos fill the square frame, trimming a sliver off the top and bottom,
+   so no black strips show at the sides */
 .project__media video,
 .project__media img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .project__title {
   margin: 0 0 0.6rem;
